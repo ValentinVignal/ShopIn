@@ -1,7 +1,8 @@
 import React from 'react';
 import './Product.css';
+import { useStateValue } from './StateProvider';
 
-interface ProductInterface {
+export interface ProductInterface {
     id: string,
     title: string,
     image: string,
@@ -9,7 +10,17 @@ interface ProductInterface {
     rating: number
 };
 
-function Product(productInterface: ProductInterface) {
+function Product(productInterface: ProductInterface): JSX.Element {
+
+    const [userState, dispatch] = useStateValue();
+
+    const addToBasket = () => {
+        dispatch({
+            type: 'ADD_TO_BASKET',
+            item: productInterface,
+        });
+    };
+
     return (
         <div className='product'>
             <div className='product__info'>
@@ -25,7 +36,7 @@ function Product(productInterface: ProductInterface) {
                 </div>
             </div>
             <img src={productInterface.image} alt='' />
-            <button>Add to basket</button>
+            <button onClick={addToBasket}>Add to basket</button>
         </div>
     );
 }
