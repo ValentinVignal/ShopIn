@@ -17,6 +17,7 @@ function Checkout() {
                     src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQvJW28e-pLWyVgYfngiln2LpIhT6rUGUNJEg&usqp=CAU"
                     alt=''
                 />
+                <h3>Hello, {userState.user?.email}</h3>
                 {
                     (userState.basket.length) ? (
                         <div>

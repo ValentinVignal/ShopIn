@@ -14,15 +14,17 @@ function App() {
   useEffect(() => {
     // Will only run once the app component loads
     auth.onAuthStateChanged(authUser => {
-      console.log('The user us ', authUser);
+      // console.log('The user us ', authUser);
 
       if (authUser) {
         // The user is logged in
-        dispatch({
-          type: 'SET_USER',
-          user: authUser
-        });
-      } else {
+        if (authUser.email !== userState.user?.email) {
+          dispatch({
+            type: 'SET_USER',
+            user: authUser
+          });
+        }
+      } else if (userState.user) {
         // No user is logged in
         dispatch({
           type: 'SET_USER',

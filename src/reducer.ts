@@ -32,7 +32,7 @@ function reducer(state: UserState = initialState, action: UserAction): UserState
             }
             return {
                 ...state,
-                basket: newBasket
+                basket: newBasket,
             };
         }
         case 'REMOVE_FROM_BASKET': {

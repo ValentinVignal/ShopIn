@@ -17,7 +17,7 @@ function Product(productInterface: ProductInterface): JSX.Element {
     const addToBasket = () => {
         dispatch({
             type: 'ADD_TO_BASKET',
-            item: productInterface,
+            item: productInterface
         });
     };
 

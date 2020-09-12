@@ -14,6 +14,10 @@ function Header() {
     function handleAuthentication(): void {
         if (userState.user) {
             auth.signOut();
+            // dispatch({
+            //     type: 'SET_USER',
+            //     user: null
+            // });
         }
     }
 
@@ -31,9 +35,9 @@ function Header() {
                 <SearchIcon className="header__searchIcon" />
             </div>
 
-            <div className="header__nav" onClick={handleAuthentication}>
-                <Link to="/login" className="header__link">
-                    <div className="header__option">
+            <div className="header__nav">
+                <Link to={userState.user ? '/' : "/login"} className="header__link">
+                    <div className="header__option" onClick={handleAuthentication}>
                         <span className='header__optionLineOne'>Hello</span>
                         <span className='header__optionLineTwo'>
                             {userState.user ? 'Sign Out' : 'Sign In'}
