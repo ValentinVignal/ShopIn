@@ -1,12 +1,15 @@
 import { ProductInterface } from './Product';
 import PopoverAnimationDefault from 'material-ui/Popover/PopoverAnimationDefault';
+import { stat } from 'fs';
 
 export interface UserState {
     basket: Array<ProductInterface>,
+    user: any
 }
 
 export const initialState: UserState = {
-    basket: []
+    basket: [],
+    user: null
 }
 
 export function getBasketTotal(basket: Array<ProductInterface>) {
@@ -16,7 +19,8 @@ export function getBasketTotal(basket: Array<ProductInterface>) {
 export interface UserAction {
     type: string,
     item?: ProductInterface,
-    id?: string
+    id?: string,
+    user?: any
 }
 
 function reducer(state: UserState = initialState, action: UserAction): UserState {
@@ -41,12 +45,17 @@ function reducer(state: UserState = initialState, action: UserAction): UserState
                 } else {
                     console.warn(`Could not remove product (id ${action.id})`);
                 }
-
             }
             return {
                 ...state,
                 basket: newBasket
             };
+        }
+        case 'SET_USER': {
+            return {
+                ...state,
+                user: action.user
+            }
         }
         default: {
             return state;

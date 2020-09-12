@@ -24,3 +24,7 @@ yarn-error.log*
 
 # VSCode
 .vscode/
+
+# Firebase
+
+src/firebase.ts
