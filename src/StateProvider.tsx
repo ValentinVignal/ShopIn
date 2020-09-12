@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useReducer, Dispatch } from 'react';
 import { UserState, initialState, UserAction } from './reducer';
+import { ProductInterface } from './Product';
 
 // Data Layer
 
@@ -24,6 +25,6 @@ export function StateProvider(stateProviderInput: StateProviderInput): JSX.Eleme
 
 
 // To use it inside a component
-export function useStateValue(): any[] {
-    return useContext(StateContext);
+export function useStateValue(): [UserState, Dispatch<UserAction>] {
+    return useContext(StateContext) as [UserState, Dispatch<UserAction>];
 }

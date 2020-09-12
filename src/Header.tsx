@@ -1,14 +1,14 @@
-import React from 'react';
+import React, { Dispatch } from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
 import SearchIcon from '@material-ui/icons/Search';
 import ShoppingBasketIcon from "@material-ui/icons/ShoppingBasket";
 import { useStateValue } from './StateProvider';
-import { UserState } from './reducer';
+import { UserState, UserAction } from './reducer';
 
 function Header() {
 
-    const [userState, dispatch] = useStateValue();
+    const [userState, dispatch]: [UserState, Dispatch<UserAction>] = useStateValue();
 
     return (
         <nav className='header'>
