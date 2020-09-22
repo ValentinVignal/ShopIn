@@ -22,6 +22,15 @@ app.use(express.json());
 // API Routes
 app.get('/', (request, response) => response.status(200).send('hello world'));
 
+app.post('/payments/create', async function (request, response) {
+    const total = request.params.total;
+    console.log('Payment Request received for ammount', total);
+    await new Promise((resolve, reject) => setTimeout(resolve, 1000));
+    response.status(201).send({
+        clientSecret: 'secret'
+    });
+});
+
 // Listen Command
 exports.api = functions.https.onRequest(app);
 

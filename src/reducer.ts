@@ -51,6 +51,12 @@ function reducer(state: UserState = initialState, action: UserAction): UserState
                 basket: newBasket
             };
         }
+        case 'EMPTY_BASKET': {
+            return {
+                ...state,
+                basket: []
+            };
+        }
         case 'SET_USER': {
             return {
                 ...state,
