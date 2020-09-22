@@ -4,9 +4,10 @@ import { ActionShoppingBasket } from 'material-ui/svg-icons';
 import { useStateValue } from './StateProvider';
 import { getBasketTotal } from './reducer';
 import './Subtotal.css';
+import { useHistory } from 'react-router-dom';
 
 function Subtotal() {
-
+    const history = useHistory();
     const [userState, dispatch] = useStateValue();
 
     return (
@@ -28,7 +29,7 @@ function Subtotal() {
                     </>
                 )}
             />
-            <button>Proceed to Checkout</button>
+            <button onClick={e => history.push('/payment')}>Proceed to Checkout</button>
         </div>
     );
 }
