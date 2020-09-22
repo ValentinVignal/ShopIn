@@ -3,7 +3,8 @@ import { ProductInterface } from './Product';
 import { useStateValue } from './StateProvider';
 
 interface CheckoutProductProps {
-    item: ProductInterface
+    item: ProductInterface,
+    hideButton?: boolean
 };
 
 function CheckoutProduct(props: CheckoutProductProps) {
@@ -30,8 +31,10 @@ function CheckoutProduct(props: CheckoutProductProps) {
                 <div className="checkoutProduct__rating">
                     {Array(item.rating).fill(null).map((_, i) => (<p>⭐</p>))}
                 </div>
+                {!props.hideButton && (
+                    <button onClick={removeFromBasket}>Remove from basket</button>
 
-                <button onClick={removeFromBasket}>Remove from basket</button>
+                )}
             </div>
         </div>
     )

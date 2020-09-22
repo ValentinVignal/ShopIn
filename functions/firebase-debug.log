@@ -275,3 +275,39 @@ Issues? Report them at https://github.com/firebase/firebase-tools/issues and att
 [info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"Finished \"api\" in ~1s"}}
 [debug] [2020-09-22T14:19:15.451Z] [worker-api-a5b34973-0171-4200-990e-2f9c4d794e88]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-api-a5b34973-0171-4200-990e-2f9c4d794e88]: IDLE"}}
 [debug] [2020-09-22T14:19:15.451Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-09-22T14:31:30.741Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-09-22T14:31:30.742Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-09-22T14:31:30.742Z] Accepted request POST /shopin-97002/us-central1/api/payments/create?total=1196 --> api
+[debug] [2020-09-22T14:31:30.743Z] [worker-pool] submitWork(triggerId=api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=api)"}}
+[debug] [2020-09-22T14:31:30.743Z] [worker-api-a5b34973-0171-4200-990e-2f9c4d794e88]: Assigning socketPath: /tmp/fire_emu_19932.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-api-a5b34973-0171-4200-990e-2f9c4d794e88]: Assigning socketPath: /tmp/fire_emu_19932.sock"}}
+[debug] [2020-09-22T14:31:30.743Z] [worker-api-a5b34973-0171-4200-990e-2f9c4d794e88]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-api-a5b34973-0171-4200-990e-2f9c4d794e88]: BUSY"}}
+[debug] [2020-09-22T14:31:30.745Z] [runtime-status] [19932] Trigger "api" has been found, beginning invocation! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [19932] Trigger \"api\" has been found, beginning invocation!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"Beginning execution of \"api\""}}
+[debug] [2020-09-22T14:31:30.746Z] [runtime-status] [19932] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [19932] triggerDefinition {\"httpsTrigger\":{},\"name\":\"api\",\"entryPoint\":\"api\"}"}}
+[debug] [2020-09-22T14:31:30.746Z] [runtime-status] [19932] Running api in mode HTTPS {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [19932] Running api in mode HTTPS"}}
+[debug] [2020-09-22T14:31:30.747Z] [runtime-status] [19932] Attempting to listen to socketPath: /tmp/fire_emu_19932.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [19932] Attempting to listen to socketPath: /tmp/fire_emu_19932.sock"}}
+[debug] [2020-09-22T14:31:30.749Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2020-09-22T14:31:30.762Z] [runtime-status] [19932] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [19932] Ephemeral server handling POST request"}}
+[debug] [2020-09-22T14:31:30.763Z] [runtime-status] [19932] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [19932] Ephemeral server survived."}}
+[info] >  Payment Request received for ammount undefined {"user":"Payment Request received for ammount undefined","metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"\u001b[90m> \u001b[39m Payment Request received for ammount undefined"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"Finished \"api\" in ~1s"}}
+[debug] [2020-09-22T14:31:31.780Z] [worker-api-a5b34973-0171-4200-990e-2f9c4d794e88]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-api-a5b34973-0171-4200-990e-2f9c4d794e88]: IDLE"}}
+[debug] [2020-09-22T14:31:31.781Z] [work-queue] {"queueLength":0,"workRunningCount":0}
+[debug] [2020-09-22T14:31:35.922Z] [work-queue] {"queueLength":1,"workRunningCount":0}
+[debug] [2020-09-22T14:31:35.922Z] [work-queue] {"queueLength":0,"workRunningCount":1}
+[debug] [2020-09-22T14:31:35.922Z] Accepted request POST /shopin-97002/us-central1/api/payments/create?total=0 --> api
+[debug] [2020-09-22T14:31:35.922Z] [worker-pool] submitWork(triggerId=api) {"metadata":{"emulator":{"name":"functions"},"message":"[worker-pool] submitWork(triggerId=api)"}}
+[debug] [2020-09-22T14:31:35.923Z] [worker-api-a5b34973-0171-4200-990e-2f9c4d794e88]: Assigning socketPath: /tmp/fire_emu_19932.sock {"metadata":{"emulator":{"name":"functions"},"message":"[worker-api-a5b34973-0171-4200-990e-2f9c4d794e88]: Assigning socketPath: /tmp/fire_emu_19932.sock"}}
+[debug] [2020-09-22T14:31:35.923Z] [worker-api-a5b34973-0171-4200-990e-2f9c4d794e88]: BUSY {"metadata":{"emulator":{"name":"functions"},"message":"[worker-api-a5b34973-0171-4200-990e-2f9c4d794e88]: BUSY"}}
+[debug] [2020-09-22T14:31:35.923Z] [runtime-status] [19932] Trigger "api" has been found, beginning invocation! {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [19932] Trigger \"api\" has been found, beginning invocation!"}}
+[info] i  functions: Beginning execution of "api" {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"Beginning execution of \"api\""}}
+[debug] [2020-09-22T14:31:35.925Z] [runtime-status] [19932] triggerDefinition {"httpsTrigger":{},"name":"api","entryPoint":"api"} {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [19932] triggerDefinition {\"httpsTrigger\":{},\"name\":\"api\",\"entryPoint\":\"api\"}"}}
+[debug] [2020-09-22T14:31:35.925Z] [runtime-status] [19932] Running api in mode HTTPS {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [19932] Running api in mode HTTPS"}}
+[debug] [2020-09-22T14:31:35.926Z] [runtime-status] [19932] Attempting to listen to socketPath: /tmp/fire_emu_19932.sock {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [19932] Attempting to listen to socketPath: /tmp/fire_emu_19932.sock"}}
+[debug] [2020-09-22T14:31:35.927Z] [functions] Runtime ready! Sending request! {"metadata":{"emulator":{"name":"functions"},"message":"[functions] Runtime ready! Sending request!"}}
+[debug] [2020-09-22T14:31:35.934Z] [runtime-status] [19932] Ephemeral server handling POST request {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [19932] Ephemeral server handling POST request"}}
+[debug] [2020-09-22T14:31:35.934Z] [runtime-status] [19932] Ephemeral server survived. {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"[runtime-status] [19932] Ephemeral server survived."}}
+[info] >  Payment Request received for ammount undefined {"user":"Payment Request received for ammount undefined","metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"\u001b[90m> \u001b[39m Payment Request received for ammount undefined"}}
+[info] i  functions: Finished "api" in ~1s {"metadata":{"emulator":{"name":"functions"},"function":{"name":"api"},"message":"Finished \"api\" in ~1s"}}
+[debug] [2020-09-22T14:31:36.938Z] [worker-api-a5b34973-0171-4200-990e-2f9c4d794e88]: IDLE {"metadata":{"emulator":{"name":"functions"},"message":"[worker-api-a5b34973-0171-4200-990e-2f9c4d794e88]: IDLE"}}
+[debug] [2020-09-22T14:31:36.939Z] [work-queue] {"queueLength":0,"workRunningCount":0}

@@ -8,6 +8,7 @@ import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from './reducer';
 import { useHistory } from 'react-router-dom';
 import axios from './axios';
+import { db } from './firebase';
 
 function Payment() {
     const [userState, dispatch] = useStateValue();
@@ -41,7 +42,15 @@ function Payment() {
         event.preventDefault();
         setProcessing(true);
         const isConfirmed = await confirmSecret(clientSecret);
+        const now = Date.now();
+        const paymentId = now.toString();
         if (isConfirmed) {
+            db.collection('users').doc(userState.user.uid).collection('orders').doc(paymentId).set({
+                basket: userState.basket,
+                amount: getBasketTotal(userState.basket),
+                created: now
+            });
+
             setSucceeded(true);
             setError('');
 
